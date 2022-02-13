@@ -18,17 +18,20 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.grey,
+      backgroundColor: Colors.black,
       body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Image.asset('assets/images/coin.jpeg'),
-            const SizedBox(height: 30),
-            Lottie.asset('assets/lottie.json'),
-            const SizedBox(height: 15),
-            CustomerButton(colour: Colors.blue, onpressedd: (){Get.off(()=>const WelcomeScreen());}, name: 'Enter'),
-          ],
+        child: Padding(
+          padding: const EdgeInsets.only(top: 60, right: 15, left: 15),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: [
+              Image.asset('assets/images/logo.jpeg',),
+              // const SizedBox(height: 150),
+              Lottie.asset('assets/lottie.json'),
+              // const SizedBox(height: 15),
+              CustomerButton(colour: Colors.green, onpressedd: (){Get.off(()=>const WelcomeScreen());}, name: 'Enter', textStyle: const TextStyle(color: Colors.white, fontSize: 20)),
+            ],
+          ),
         ),
       ),
     );

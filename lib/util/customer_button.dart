@@ -3,10 +3,11 @@ import 'package:get/get.dart';
 
 class CustomerButton extends StatelessWidget {
   const CustomerButton(
-      {Key? key, required this.colour, required this.onpressedd, required this.name}) : super(key: key);
+      {Key? key, required this.colour, required this.onpressedd, required this.name, required this.textStyle}) : super(key: key);
   final Color colour;
   final Function onpressedd;
   final String name;
+  final TextStyle textStyle;
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -19,11 +20,11 @@ class CustomerButton extends StatelessWidget {
           onPressed: () {
             onpressedd();
           },
-          minWidth: Get.width * 0.9,
+          minWidth: Get.width * 0.8,
           height: Get.height * 0.09,
           child: Text(
             name,
-            style: const TextStyle(color: Colors.white, fontSize: 20),
+            style: textStyle,
           ),
         ),
       ),

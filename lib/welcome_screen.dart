@@ -10,22 +10,26 @@ class WelcomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor: Colors.black,
       appBar: AppBar(
+        backgroundColor: Colors.transparent,
         centerTitle: true,
         elevation: 0.0,
         title: const Text('Welcome to our crypto app', style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),),
       ),
       body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Image.asset('assets/images/coin.jpeg'),
-            const SizedBox(height: 30),
-            CustomerButton(colour: Colors.blue, onpressedd: (){Get.off(()=>const TradingAccount());}, name: 'Click here to open a trading account'),
-            const SizedBox(height: 15),
-            CustomerButton(colour: Colors.blue, onpressedd: (){Get.off(()=>const ListCoin());}, name: 'Click here to list your coin or token'),
-          ],
+        child: Padding(
+          padding: const EdgeInsets.all(15),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Image.asset('assets/images/coin.jpeg'),
+              const SizedBox(height: 30),
+              CustomerButton(colour: Colors.green, onpressedd: (){Get.off(()=>const TradingAccount());}, name: 'Click here to open a trading account', textStyle: const TextStyle(color: Colors.white, fontSize: 15)),
+              const SizedBox(height: 15),
+              CustomerButton(colour: Colors.green, onpressedd: (){Get.off(()=>const ListCoin());}, name: 'Click here to list your coin or token',textStyle: const TextStyle(color: Colors.white, fontSize: 15)),
+            ],
+          ),
         ),
       ),
     );
