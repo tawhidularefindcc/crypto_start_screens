@@ -15,7 +15,7 @@ class WelcomeScreen extends StatelessWidget {
         backgroundColor: Colors.transparent,
         centerTitle: true,
         elevation: 0.0,
-        title: const Text('Welcome to our crypto app', style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),),
+        title: const Text('Welcome to Launch Bites', style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),),
       ),
       body: Center(
         child: Padding(

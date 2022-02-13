@@ -29,7 +29,7 @@ class _SplashScreenState extends State<SplashScreen> {
               // const SizedBox(height: 150),
               Lottie.asset('assets/lottie.json'),
               // const SizedBox(height: 15),
-              CustomerButton(colour: Colors.green, onpressedd: (){Get.off(()=>const WelcomeScreen());}, name: 'Enter', textStyle: const TextStyle(color: Colors.white, fontSize: 20)),
+              CustomerButton(colour: Colors.green, onpressedd: (){Get.off(()=>const WelcomeScreen());}, name: 'Enter', textStyle: const TextStyle(color: Colors.white, fontSize: 24)),
             ],
           ),
         ),
